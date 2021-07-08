@@ -1,7 +1,8 @@
 'use strict';
+
 const axios = require('axios');
 
-let sessionsURL = '10.10.10.28';
+let sessionsURL = '10.10.10.28/cdn-cgi/login';
 
 let creds = {
     username: 'admin',
@@ -15,5 +16,7 @@ axios.post(sessionsURL, {}, {
     }
 })
 .then((response) => {
-    console.log(response.headers);
+    console.log('Authenticated!');
+}).catch((error) => {
+    console.log(error)
 });
