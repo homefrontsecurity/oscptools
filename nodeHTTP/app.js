@@ -9,9 +9,10 @@ let creds = {
     password: 'MEGACORP_4dm1n!!'
 };
 
-print(sessionsURL);
-print(creds);
-print('Attempting HTTP request');
+console.log(sessionsURL);
+console.log(creds);
+console.log('Attempting HTTP request');
+
 axios.post(sessionsURL, {}, {
     auth: {
         username: creds.username,
