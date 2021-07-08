@@ -2,13 +2,16 @@
 
 const axios = require('axios');
 
-let sessionsURL = '10.10.10.28/cdn-cgi/login';
+let sessionsURL = 'http://10.10.10.28/cdn-cgi/login';
 
 let creds = {
     username: 'admin',
     password: 'MEGACORP_4dm1n!!'
 };
 
+print(sessionsURL);
+print(creds);
+print('Attempting HTTP request');
 axios.post(sessionsURL, {}, {
     auth: {
         username: creds.username,
@@ -18,5 +21,5 @@ axios.post(sessionsURL, {}, {
 .then((response) => {
     console.log('Authenticated!');
 }).catch((error) => {
-    console.log(error)
+    console.log('error')
 });
