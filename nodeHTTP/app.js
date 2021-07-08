@@ -14,7 +14,7 @@ console.log(creds);
 console.log('Attempting HTTP request');
 
 axios.post(sessionsURL, {}, {
-    auth: {
+    data: {
         username: creds.username,
         password: creds.password
     }
