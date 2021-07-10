@@ -20,6 +20,7 @@ axios.post(sessionsURL, {}, {
     }
 })
 .then((response) => {
+    console.log(response)
     console.log('Authenticated!');
 }).catch((error) => {
     console.log('error')
